@@ -4,10 +4,10 @@
 
 /*====== Variables ======*/
 :root {
-  --yellow: #EAC926;
-  --dark-blue: #03264C;
-  --light-blue: #1259c3;
-  --gray: #666666;
+  --yellow: #000000;
+  --dark-blue: #ffffff;
+  --light-blue: #ffffff;
+  --gray: #ffffff;
   --light-gray: #ebebeb;
   --green: #39b54a;
   --base-font-family: 'Roboto', sans-serif
@@ -29,7 +29,7 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color:black;
 }
 
 ul,
@@ -42,7 +42,7 @@ ol {
 a {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: red;
 }
 
 figure {
@@ -214,7 +214,7 @@ hr {
 .product-box_data p {
   font-size: 1.5em;
   width: 100%;
-  color: var(--gray);
+  color: red;
   margin: 0;
   height: 0;
   transition: 300ms;

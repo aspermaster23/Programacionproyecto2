@@ -22,7 +22,24 @@ let products = [
         marca:"Porsche",
         modelo:"Ecosport",
         descripcion: "El Porsche Cayenne S equipa un motor V6 de 2.9 litros de cilindrada con doble turbo y 324 kW (440 cv) de potencia máxima, y un par máximo de 550 Nm. El paso de 0 a 100 km/h se produce en 5,2 segundos (4,9 s. con Performance Start) alcanzando una velocidad máxima de 265 km/h.",
-        year:2021
+        year:2021,
+        comments:[
+            {name:"Julian",
+        lastname:"Ruiz",
+            img:"https://img.freepik.com/foto-gratis/apuesto-hombre-empresario-sonriendo-alegre_176420-17877.jpg?w=2000",
+            texto:"Auto lindo!"
+    },
+            {name:"Julian",
+        lastname:"Ruiz",
+            img:"https://img.freepik.com/foto-gratis/apuesto-hombre-empresario-sonriendo-alegre_176420-17877.jpg?w=2000",
+            texto:"Auto lindo!"
+    },
+            {name:"Julian",
+        lastname:"Ruiz",
+            img:"https://img.freepik.com/foto-gratis/apuesto-hombre-empresario-sonriendo-alegre_176420-17877.jpg?w=2000",
+            texto:"Auto lindo!"
+    }
+        ]
         
     },{id:1,
         img:"images/products/producto1.jpg",

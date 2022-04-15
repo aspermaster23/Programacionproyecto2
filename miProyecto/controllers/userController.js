@@ -14,7 +14,7 @@ let userController = {
         res.render('profile', { title: 'Express' , user: user , products:products});
       },
       edit: (req, res)=> {
-        res.render('profile-edit', { title: 'Express' });
+        res.render('profile-edit', { title: 'Express', user: user });
       }
 }
 module.exports = userController

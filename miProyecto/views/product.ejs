@@ -7,7 +7,7 @@
 	
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2> 
+			<h2 class="products-title"><%= product.name %> </h2> 
 			<p class="product-detail-description">
 				<a href="/product/add">Editar</a>
 			</p>
@@ -15,9 +15,10 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="https://phantom-marca.unidadeditorial.es/8564fa122f23ce2ade03fa498bb000a7/resize/1320/f/jpg/assets/multimedia/imagenes/2021/06/30/16250401118863.jpg" alt="" class="product-detail-img">
+					<img src="<%= product.img %> " alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						El Porsche Cayenne S equipa un motor V6 de 2.9 litros de cilindrada con doble turbo y 324 kW (440 cv) de potencia máxima, y un par máximo de 550 Nm. El paso de 0 a 100 km/h se produce en 5,2 segundos (4,9 s. con Performance Start) alcanzando una velocidad máxima de 265 km/h.</p>
+						<%= product.descripcion %> 
+					</p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">

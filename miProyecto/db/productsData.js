@@ -67,22 +67,22 @@ let products = [
        "year":2018,
        "comments":[
           {
-             "name":"",
-             "lastname":"",
-             "img":"https://img.freepik.com/foto-gratis/apuesto-hombre-empresario-sonriendo-alegre_176420-17877.jpg?w=2000",
-             "texto":"Auto lindo!"
-          },
+             "name":"Pilar",
+             "lastname":"Garcia",
+             "img":"https://www.unwomen.org/sites/default/files/Communications/Headquarters/Images/02_WhatWeDo_LeadershipAndPoliticalParticipation_675x350.jpg?la=en",
+             "texto":"Ideal para la carretera"
+         },
           {
              "name":"Julian",
              "lastname":"Gonzalez",
              "img":"https://img.freepik.com/foto-gratis/retrato-estudio-hombre-moreno-confianza_1187-5799.jpg?w=2000",
-             "texto":"Que buen motor!"
+             "texto":"Muy lindo!"
           },
           {
              "name":"Ernesto ",
              "lastname":"Guzman",
              "img":"https://conceptodefinicion.de/wp-content/uploads/2015/03/hombre.jpg",
-             "texto":"¿Es grande el baul?"
+             "texto":"Que tal las llantas?"
           }
        ]
     },
@@ -99,20 +99,20 @@ let products = [
              "name":"Juliana",
              "lastname":"Mendoza",
              "img":"https://fotografias.antena3.com/clipping/cmsimages01/2021/05/02/26E03450-C5FB-4D16-BC9B-B282AE784352/57.jpg",
-             "texto":"Me encanta!"
+             "texto":"Me encanta el color"
           },
-          {
-             "name":"Rodrigo",
-             "lastname":"Perez",
-             "img":"https://static2.abc.es/media/summum/2021/10/01/maxi_iglesias-kXKH--620x349@abc.jpeg",
-             "texto":"Quiero unooo"
-          },
-          {
+          { 
              "name":"Milagros",
              "lastname":"Juarez",
              "img":"https://static01.nyt.com/images/2017/05/07/arts/07GAL-GADOTweb/07GAL-GADOTweb-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-             "texto":"Este quiero para mi cumpleaños"
-          }
+             "texto":"AMAMOS"
+          },
+          {
+             "name":"Pedro",
+             "lastname":"Acosta",
+             "img":"https://www.cdc.gov/preconception/spanish/images/man-with-arms-crossed.jpg",
+             "texto":"Muchas ganas de probarla"
+          },
        ]
     },
     {
@@ -299,22 +299,22 @@ let products = [
       "year":2022,
       "comments":[
          {
-            "name":"Juliana",
-            "lastname":"Mendoza",
-            "img":"https://fotografias.antena3.com/clipping/cmsimages01/2021/05/02/26E03450-C5FB-4D16-BC9B-B282AE784352/57.jpg",
-            "texto":"Me encanta!"
+            "name":"Marta",
+            "lastname":"Gutierrez",
+            "img":"https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/mujer-feliz_0.jpg.webp?itok=qVurZLE7",
+            "texto":"Esteee"
          },
          {
-            "name":"Rodrigo",
-            "lastname":"Perez",
-            "img":"https://static2.abc.es/media/summum/2021/10/01/maxi_iglesias-kXKH--620x349@abc.jpeg",
-            "texto":"Quiero unooo"
+            "name":"Pedro",
+            "lastname":"Acosta",
+            "img":"https://www.cdc.gov/preconception/spanish/images/man-with-arms-crossed.jpg",
+            "texto":"Que autazo"
          },
          {
-            "name":"Milagros",
-            "lastname":"Juarez",
-            "img":"https://static01.nyt.com/images/2017/05/07/arts/07GAL-GADOTweb/07GAL-GADOTweb-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-            "texto":"Este quiero para mi cumpleaños"
+            "name":"Pilar",
+            "lastname":"Garcia",
+            "img":"https://www.unwomen.org/sites/default/files/Communications/Headquarters/Images/02_WhatWeDo_LeadershipAndPoliticalParticipation_675x350.jpg?la=en",
+            "texto":"Muy fachero"
          }
       ]
    },
@@ -349,9 +349,6 @@ let products = [
    }
     
  ]
-
-
-
 
 
 module.exports = products

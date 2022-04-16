@@ -546,3 +546,7 @@ textarea.form-input {
   position: relative;
   top: 10px;
 }
+
+.product-box_image img {
+  height: 150px;
+}

@@ -5,11 +5,11 @@ let user = require("../db/usersData")
 
 let indexController = {
     home: (req, res)=> {
-        res.render('index', { products : productos});
-      },
+        res.render('index', { title: 'Express', products : productos});
+      }, //vmpaolpr
       
     search: (req, res)=> {
-        res.render('search-results', {  products : productos, user:user});
+        res.render('search-results', { title: 'Express', products : productos, user:user});
       }
 } 
 

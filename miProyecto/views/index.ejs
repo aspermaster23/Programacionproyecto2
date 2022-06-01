@@ -22,13 +22,14 @@
 				<% let product = products[i] %> 
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/<%= i %> ">
+						<a href="/product/<%= i %>">
 							<figure class="product-box_image">
-								<img src=<%= product.img %> alt="<%= product.name %>">
+								<img src="/images/products/Porsche.png" alt="<%= product.car_brand %>">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= product.name %></h2>
-								<p><%= product.descripcion %> </p>
+								<h2><%= product.car_brand %></h2>
+								<p><%= product.car_type %> - <%= product.car_color %> - <%= product.car_year %> </p>
+								<p><%= product.car_description %> </p>
 								<p>Comentarios: 12</p>
 							</article>
 						</a>
@@ -48,13 +49,14 @@
 				<% let product = products[i] %> 
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/<%= i %> ">
+						<a href="/product/<%= i %>">
 							<figure class="product-box_image">
-								<img src=<%= product.img %>  alt="Porsche Cayenne">
+								<img src="/images/products/Porsche.png" alt="<%= product.car_brand %>">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= product.name %></h2>
-								<p><%= product.descripcion %> </p>
+								<h2><%= product.car_brand %></h2>
+								<p><%= product.car_type %> - <%= product.car_color %> - <%= product.car_year %> </p>
+								<p><%= product.car_description %> </p>
 								<p>Comentarios: 12</p>
 							</article>
 						</a>

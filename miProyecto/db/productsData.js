@@ -1,5 +1,5 @@
 let products = [
-   {
+   { 
       "id":1,
       "img":"https://phantom-marca.unidadeditorial.es/8564fa122f23ce2ade03fa498bb000a7/resize/1320/f/jpg/assets/multimedia/imagenes/2021/06/30/16250401118863.jpg",
       "name":"Porsche Cayenne",

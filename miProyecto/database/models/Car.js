@@ -46,17 +46,17 @@ module.exports = function (sequelize, dataTypes) {
 
     const Car = sequelize.define(alias, cols, config);
 
-    // Car.associate = function (models) {
-    //     Car.belongsTo(models.User, {
-    //         as: 'user',
-    //         foreignKey: 'user_id',
-    //     })
+    Car.associate = function (models) {
+        Car.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'user_id',
+        })
 
-    //     Car.hasMany(models.Comment, {
-    //         as: 'comment',
-    //         foreignKey: 'product_id'
-    //     })
-    // };
+        Car.hasMany(models.Comment, {
+            as: 'comment',
+            foreignKey: 'car_id'
+        })
+    };
 
     return Car;
 }

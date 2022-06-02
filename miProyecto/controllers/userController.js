@@ -2,6 +2,7 @@
 
 let products = require("../db/productsData")
 let user = require("../db/usersData")
+let db = require("../database/models")
 
 let userController = {
     register: (req, res)=> {
@@ -15,6 +16,10 @@ let userController = {
       },
       edit: (req, res)=> {
         res.render('profile-edit', { title: 'Express', user: user });
+      },
+      storeUser: (req, res)=> {
+        
+        res.send(req.body)
       }
 }
 module.exports = userController

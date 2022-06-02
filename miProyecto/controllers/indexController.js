@@ -3,7 +3,7 @@
 // let productos = require("../db/productsData")
 let user = require("../db/usersData")
 let db = require("../database/models")
-
+let op = db.Sequelize.Op
 let indexController = {
     home: (req, res)=> {
         db.Car.findAll().then(productos =>{
@@ -14,8 +14,17 @@ let indexController = {
       }, //vmpaolpr
       
     search: (req, res)=> {
-        res.render('search-results', { title: 'Express', products : productos, user:user});
-      }
+      let search = req.query.search
+      db.Car.findAll({
+        where:[{
+          car_brand:{
+            [op.like]: '%' + search + '%'
+          }
+        }]
+      }).then(productos =>{
+        res.render('search-results', { title: 'Express', products : productos,});
+      })
+    }
 } 
 
 module.exports = indexController

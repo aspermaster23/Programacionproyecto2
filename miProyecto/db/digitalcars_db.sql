@@ -50,4 +50,5 @@ VALUES
 
 INSERT INTO comments
 VALUES
+(DEFAULT, 1, 1, "Auto lindo!", DEFAULT, DEFAULT ),
 (DEFAULT, 1, 1, "Auto lindo!", DEFAULT, DEFAULT );

@@ -5,8 +5,17 @@ let user = require("../db/usersData")
 let db = require("../database/models")
 let op = db.Sequelize.Op
 let indexController = {
+  
     home: (req, res)=> {
-        db.Car.findAll().then(productos =>{
+        db.Car.findAll({
+          include:[{
+            association: 'user'
+          },
+          {
+            association:'comment'
+          }
+        ]
+        }).then(productos =>{
           //res.send(productos);
          res.render('index', { title: 'Express', products : productos});
         })

@@ -3,6 +3,7 @@
 let products = require("../db/productsData")
 let user = require("../db/usersData")
 let db = require("../database/models")
+let bcrypt = require("bcryptjs")
 
 let userController = {
     register: (req, res)=> {
@@ -18,8 +19,33 @@ let userController = {
         res.render('profile-edit', { title: 'Express', user: user });
       },
       storeUser: (req, res)=> {
-        
-        res.send(req.body)
+        db.User.findOne({
+          where:[
+            {
+              email:req.body.email
+            }
+          ]
+        }).then(user=>{
+          if(!user){
+            let usuario ={
+              username:req.body.username,
+              email:req.body.email,
+              password:bcrypt.hashSync(req.body.password,10),
+              birthday:req.body.birthday,
+              img:"",
+            }
+            db.User.create(usuario)
+            .then(info =>{
+              return res.redirect('/users/login')
+            }).catch(e=>{
+              console.log(e)
+            })
+          }else{
+            res.send("YA HAY UN MAIL CON ESE USUARIO")
+          }
+        }).catch(error=>{
+          console.log(error)
+        })
       }
 }
 module.exports = userController

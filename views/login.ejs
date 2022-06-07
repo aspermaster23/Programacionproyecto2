@@ -16,10 +16,10 @@
 				<h2 class="products-title">Ingresar</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<form action="/users/profile" method="GET" id="formulario">
-				<input type="text" placeholder="usuario" class="texto">
-				<input type="text" placeholder="contraseña" class="texto">
-				<div class="recordarme"> <p>recordarme</p> <input type="checkbox" class="check"> </div>
+			<form action="/users/login" method="post" id="formulario">
+				<input name="email" type="email" placeholder="Correo Electronico" class="texto">
+				<input name="password" type="password" placeholder="contraseña" class="texto">
+				<div class="recordarme"> <p>recordarme</p> <input name="remember" type="checkbox" class="check"> </div>
 				<input type="submit">
 			</form>
 

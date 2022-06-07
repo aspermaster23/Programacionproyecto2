@@ -6,6 +6,8 @@ var router = express.Router();
 router.get('/register', userController.register);
 router.post('/register', userController.storeUser); //la ruta por la que se va mandar la informacion del formulario de register
 router.get('/login', userController.login);
+router.post('/login', userController.loginForm);
+router.post('/logout', userController.logout);
 router.get('/profile', userController.profile);
 router.get('/edit', userController.edit);
 

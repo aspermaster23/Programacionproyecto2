@@ -3,10 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const session = require('express-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+const { resourceLimits } = require('worker_threads');
+const db = require('./database/models');
 
 var app = express();
 
@@ -19,6 +21,44 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret:"Nuestro mensaje secreto",
+  resave: false,
+  saveUninitialized: true,
+}))
+
+app.use(function(req,res,next){
+  if(req.session.user){
+    res.locals.user = {
+      username : req.session.user.username,
+      id: req.session.user.id,
+      logueado: true
+    }
+  }else{
+    res.locals.user={
+      logueado:false
+    }
+  }
+  return next()
+})
+
+app.use(function(req,res,next) {
+  if(req.cookies.user_id && !req.session.user){
+    let cookieId = req.cookies.user_id
+
+    db.User.findByPk(cookieId)
+    .then(user=>{
+      req.session.user = user
+      res.locals.user = user
+      return next()
+    }).catch(e=>{
+      console.log(e)
+    })
+  }else{
+    return next()
+  }
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -18,13 +18,14 @@
 			
 		
 			<div class="col-12">
-				<form method="get" id="formulario" style="width: 300px;">
-					<input type="file" name="img" placeholder="Imagen del vehiculo" class="texto" >
-					<input type="text" name="name" placeholder="Marca"  class="texto">
-					<input type="text" name="modelo" placeholder="Modelo"  class="texto">
-					<input type="text" name="desc"  class="texto" placeholder="Especificaciones del producto">
-					<input type="date" name="date-time" class="texto"  placeholder="Año del auto">
-
+				<form action="/product/add" method="post" id="formulario" style="width: 300px;" enctype="multipart/form-data">
+					<input type="file" name="car_image" placeholder="Imagen del vehiculo" class="texto" >
+					<input type="text" name="car_brand" placeholder="Marca"  class="texto">
+					<input type="text" name="car_type" placeholder="Modelo"  class="texto">
+					<input type="text" name="car_description"  class="texto" placeholder="Descripcion">
+					<input type="text" name="car_color"  class="texto" placeholder="Color">
+					<input type="number" name="car_year"  class="texto" placeholder="Año">
+					<input type="hidden" name="user_id" value="<%=user.id%>">
 					<button type="submit" style="margin-top: 20px;">Agregar Producto	</button>
 				</form>
 			</div>

@@ -2,9 +2,11 @@
 <html lang="es">
 <%- include('./partials/head') %> 
 <body>
-
-	<%- include('./partials/header') %> 
-	
+	<% if (user.logueado) { %>
+		<%- include('./partials/headerLogueado') %>
+	   <% } else{%> 
+		   <%- include('./partials/header') %>
+	   <% } %> 
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
 			<h2 class="products-title"><%= product.car_brand %> <%= product.car_type %>  </h2> 

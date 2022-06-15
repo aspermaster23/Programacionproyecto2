@@ -3,9 +3,11 @@
 <!-- Include Head -->
 <%- include('./partials/head') %> 
 <body>
-	
-	<%- include('./partials/headerLogueado') %> 
-	
+	<% if (user.logueado) { %>
+		<%- include('./partials/headerLogueado') %>
+	   <% } else{%> 
+		   <%- include('./partials/header') %>
+	   <% } %> 
 
 	<!-- Datos del usuario -->
 	<section class="info-usuario container products-wrapper">

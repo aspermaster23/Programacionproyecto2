@@ -14,21 +14,22 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Editar mi perfil</h2>
+				<h2 class="products-title">Editar</h2>
 			</div>
 			<div class="col-12">
-				<form action="" method="get" id="formulario" style="width: 300px;">
-					<input type="text" name="username" placeholder="Nombre de Usuario" class="texto">
-					<input type="text" name="name" placeholder="Nombre " class="texto">
-					<input type="text" name="lastname" placeholder="Apellido" class="texto">
-					<input type="email" name="email" placeholder="Correo Electronico" class="texto">
-					<input type="password" name="password" placeholder="Contraseña" class="texto">
-					<input type="date" name="birthday" placeholder="Fecha" class="texto">
-					<input type="number" name="dni" placeholder="Documento" class="texto">
-					<input type="file" name="image" style="margin-top: 10px;">
-					<button type="submit" style="margin-top: 10px;">Editar Perfil</button>
+				<form action="/users/edit" method="POST"  id="formulario" style="width: 300px;">
+					<input type="text" name="username" placeholder="Nombre de Usuario" class="texto" value="<%=user.username%>">
+					<input type="email" name="email" placeholder="Correo Electronico" class="texto" value="<%=user.email%>">
+					<input type="password" name="password" placeholder="Contraseña" class="texto" value="<%=user.password%>">
+					<input type="date" name="birthday" placeholder="Fecha" class="texto" value="<%=user.birthday%>">
+					<input type="file" name="image" style="margin-top: 10px;" value="<%=user.img%>">
+					<input type="hidden" name="id" value="<%=user.id%>">
+					<button type="submit" style="margin-top: 10px;">Editar</button>
 				</form>
 			</div>
+			
+		</div>
+	</div>
 
 
 	<!-- footer -->

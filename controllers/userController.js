@@ -1,7 +1,7 @@
 
 
 let products = require("../db/productsData")
-let user = require("../db/usersData")
+//let user = require("../db/usersData")
 let db = require("../database/models")
 let bcrypt = require("bcryptjs")
 
@@ -42,10 +42,29 @@ let userController = {
         return res.redirect('/')
     },
       profile: (req, res)=> {
-        res.render('profile', { title: 'Express' , user: user , products:products});
+        db.User.findByPk(req.params.id, {
+          include:[{
+            association:'cars'
+          },{
+            association:'comments'
+          }]
+        }).then(user=>{
+          if (!user) {
+            res.redirect('/')
+            }else{
+
+              res.render('profile', { title: 'Express' , user: user , products:user.cars});
+          }
+        })
       },
       edit: (req, res)=> {
-        res.render('profile-edit', { title: 'Express', user: user });
+        let userId = req.params.id
+        db.User.findByPk(userId)
+        .then(user=>{
+
+          res.render('profile-edit', { title: 'Express', user: user });
+        })
+
       },
       storeUser: (req, res)=> {
         db.User.findOne({
@@ -72,6 +91,32 @@ let userController = {
           }else{
             res.send("YA HAY UN MAIL CON ESE USUARIO")
           }
+        }).catch(error=>{
+          console.log(error)
+        })
+      },
+      storeEdit: (req, res)=> {
+        let usuario ={
+          username:req.body.username,
+          email:req.body.email,
+          password:"",
+          birthday:req.body.birthday,
+          img:"",
+        }
+        if (!req.body.password) {
+          usuario.password = req.session.user.password
+        }else{
+          usuario.password =bcrypt.hashSync(req.body.password,10)
+        }
+
+        db.User.update(usuario,{
+          where:[
+            {
+              id:req.body.id
+            }
+          ]
+        }).then(user=>{
+          return res.redirect('/users/profile/'+ req.body.id)
         }).catch(error=>{
           console.log(error)
         })

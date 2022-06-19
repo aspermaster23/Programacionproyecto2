@@ -8,7 +8,8 @@ router.post('/register', userController.storeUser); //la ruta por la que se va m
 router.get('/login', userController.login);
 router.post('/login', userController.loginForm);
 router.post('/logout', userController.logout);
-router.get('/profile', userController.profile);
-router.get('/edit', userController.edit);
+router.get('/profile/:id', userController.profile);
+router.get('/edit/:id', userController.edit);
+router.post('/edit', userController.storeEdit);
 
 module.exports = router;

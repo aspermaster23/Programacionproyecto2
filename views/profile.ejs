@@ -17,8 +17,8 @@
 			</div>
 			<div class="data-container col-6" style="color: white">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= user.name %> <%= user.lastname %> 
-						<a href="/users/edit">
+					<h1 class="main-title"><%= user.username %> 
+						<a href="/users/edit/<%= user.id %>">
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>
@@ -26,7 +26,7 @@
 				</div>
 				<div>
 					<ul class="">
-						<li>12 productos</li>
+						<li><%= user.cars.length %>  autos</li>
 						<li>200 seguidores</li>
 						<li>300 comentarios</li>
 					</ul>
@@ -47,13 +47,14 @@
 				<% let product = products[i] %> 
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/<%= i %> ">
+						<a href="/product/<%= product.id %>">
 							<figure class="product-box_image">
-								<img src=<%= product.img %>  alt="Porsche Cayenne">
+								<img src="/images/products/<%=product.car_image%>" alt="<%= product.car_brand %>">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= product.name %></h2>
-								<p><%= product.descripcion %> </p>
+								<h2><%= product.car_brand %></h2>
+								<p><%= product.car_type %> - <%= product.car_color %> - <%= product.car_year %> </p>
+								<p><%= product.car_description %> </p>
 								<p>Comentarios: 12</p>
 							</article>
 						</a>

@@ -20,6 +20,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 /* GET home page. */
 router.get('/add', productController.add);
+router.post('/comment', productController.comment);
 router.post('/add',upload.single("car_image"), productController.storeCar);
 router.get('/:indice', productController.detail);
 module.exports = router;

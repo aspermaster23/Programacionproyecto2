@@ -9,6 +9,18 @@ let productController = {
    
     });
   },
+  comment: (req, res) => {
+    let comentario ={
+      car_id:req.body.carId,
+      user_id:req.session.user.id,
+      comentario:req.body.comentario
+    }
+    db.Comment.create(comentario)
+    .then(comentario => {
+
+      res.redirect('/');
+    })
+  },
   detail: (req, res) => {
     let indice = req.params.indice
     db.Car.findByPk(indice, {

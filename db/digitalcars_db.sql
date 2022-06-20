@@ -42,9 +42,9 @@ FOREIGN KEY (car_id) REFERENCES cars(id)
 
 INSERT INTO users 
 VALUES
-(DEFAULT, "matisilbert", "mati@gmail.com", "ale123",  "1994-04-12", "mati.png", DEFAULT, DEFAULT),
-(DEFAULT, "AnaMaidana", "AnaMaidana@gmail.com", "ale123",  "1994-04-12", "ana.png", DEFAULT, DEFAULT),
-(DEFAULT, "Alevivone", "alevivone@gmail.com", "ale123",  "1994-04-12", "ale.png", DEFAULT, DEFAULT);
+(DEFAULT, "matisilbert", "mati@gmail.com", "$10$uDNRm/a1Ved1JaB2TBAw4O7B/2qC4vkJN8uQknLuP2wq0KXEDuzA6",  "1994-04-12", "mati.png", DEFAULT, DEFAULT),
+(DEFAULT, "AnaMaidana", "AnaMaidana@gmail.com", "$10$uDNRm/a1Ved1JaB2TBAw4O7B/2qC4vkJN8uQknLuP2wq0KXEDuzA6",  "1994-04-12", "ana.png", DEFAULT, DEFAULT),
+(DEFAULT, "Alevivone", "alevivone@gmail.com", "$10$uDNRm/a1Ved1JaB2TBAw4O7B/2qC4vkJN8uQknLuP2wq0KXEDuzA6",  "1994-04-12", "ale.png", DEFAULT, DEFAULT);
 
 INSERT INTO cars
 VALUES

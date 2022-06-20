@@ -44,9 +44,7 @@ let productController = {
   },
   
   storeCar:(req,res)=>{
-    
-  
-  
+
     let car ={
       user_id: req.body.user_id,
       car_brand: req.body.car_brand,

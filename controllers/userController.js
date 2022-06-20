@@ -82,6 +82,12 @@ let userController = {
               birthday:req.body.birthday,
               img:"",
             }
+            if (!req.file) {
+              usuario.img = "default-image.png"
+            } else {
+              usuario.img = req.file.filename
+            }
+
             db.User.create(usuario)
             .then(info =>{
               return res.redirect('/users/login')

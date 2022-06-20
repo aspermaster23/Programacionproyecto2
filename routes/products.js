@@ -18,6 +18,9 @@ var storage = multer.diskStorage({
 })
  
 var upload = multer({ storage: storage })
+
+
+
 /* GET home page. */
 router.get('/add', productController.add);
 router.post('/comment', productController.comment);
